@@ -1,0 +1,162 @@
+/* Entry */
+
+.entry-header {
+  padding: 48px 0;
+  color: #ffffff;
+  background-attachment: scroll;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+.entry-header .entry-speak {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.entry-header .entry-title {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.entry-tags {
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
+.entry-tags .tag {
+  margin-right: 8px;
+  padding: 2px 4px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 12px;
+  border: 1px solid;
+  border-radius: 4px;
+}
+.entry-attachments {
+  margin-top: 8px;
+}
+.entry-attachments .attachment-quote {
+  padding: 0 16px;
+  border-left: 4px solid rgba(0, 0, 0, .1);
+}
+.entry-attachments .attachment-image,
+.entry-attachments .attachment-audio,
+.entry-attachments .attachment-video {
+  width: 100%;
+}
+.entry-footnotes {
+  margin-top: 8px;
+  padding-top: 8px;
+  color: #757575;
+  font-size: 14px;
+  border-top: 1px solid #eee;
+}
+.entry-footnotes .footnote {
+  word-break: break-all;
+}
+.entry-meta {
+  margin-top: 8px;
+  color: #bdbdbd;
+  font-size: 14px;
+}
+
+/* Comments */
+
+.container-comments {
+  margin-bottom: 48px;
+  border-top: 8px solid #f5f5f5;
+}
+.entry-comments .comment-heading {
+  display: block;
+  margin-bottom: 16px;
+}
+.entry-comment {
+  padding: 16px 0;
+  border-top: 1px solid #eee;
+}
+.entry-comment .author {
+  font-size: 14px;
+  overflow: hidden;
+}
+.entry-comment .author .author-avatar {
+  float: left;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.entry-comment .author .author-info {
+  float: left;
+  margin-left: 8px;
+  line-height: 1.5;
+}
+.entry-comment .author .author-info .author-name {
+  display: block;
+}
+.entry-comment .author .author-info .author-name.author-anonymous {
+  color: #bdbdbd;
+}
+.entry-comment .author .author-info .post-time {
+  display: block;
+  color: #bdbdbd;
+}
+.entry-comment .comment-str {
+  display: block;
+  margin-left: 56px;
+  font-size: 14px;
+}
+
+/* Tool-bar */
+
+.tool-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, .75);
+  -webkit-backdrop-filter: saturate(100%) blur(30px);
+  backdrop-filter: saturate(100%) blur(30px);
+  overflow: hidden;
+}
+.tool-bar .comment-form {
+  display: flex;
+  flex-direction: row;
+  padding: 8px 16px;
+}
+.tool-bar .comment-input {
+  flex: 8;
+  margin-right: 12px;
+  padding: 6px 12px;
+  background-color: #f5f5f5;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.tool-bar .comment-submit {
+  flex: 1;
+  background-color: #2196f3;
+  color: #ffffff;
+  font-size: 14px;
+  border-radius: 4px;
+  text-align: center;
+}
+.tool-bar .comment-submit::after {
+  display: none;
+}
+/*引用*/
+.quote{
+  font-size: 38rpx;
+  margin: 20rpx 0;
+}
+.quotebox{
+  font-size: 28rpx;
+  border-top:solid 4rpx #cccccc;
+  border-bottom:solid 4rpx #cccccc
+}
+.quotebox view{
+  margin: 10rpx 0;
+}
+.quotebox view:hover{
+  text-decoration: underline;
+}
+.quotebox view text{
+  color: #aaaaaa;
+}

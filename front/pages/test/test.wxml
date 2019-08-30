@@ -1,0 +1,4 @@
+<!--pages/test/test.wxml-->
+<view class='buttonBox' style='text-align:center;'>
+  <button bindtap='previewFile' data-url='http://120.79.54.89/wendang.docx' class='button' style='#008CBA'>生成报告文档</button>
+</view>

@@ -1,0 +1,37 @@
+/* pages/wordcloud/wordcloud.wxss */
+.tagBall{
+  width: 0rpx;
+  height: 0rpx;
+  position: absolute;
+  top: 300rpx;
+  left: 375rpx;
+}
+.tag{
+    width: 100rpx;
+    display: block;
+    position: absolute;
+    left: 0rpx;
+    top: 0rpx;
+    color: #000;
+    text-decoration: none;
+    font-size: 32rpx;
+    font-family: "微软雅黑";
+    font-weight: bold;
+}
+.tag:hover{border:1px solid #666;}
+.buttonBox{
+  position: relative;
+  top: 800rpx;
+}
+.button {
+    background-color: #008CBA; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}

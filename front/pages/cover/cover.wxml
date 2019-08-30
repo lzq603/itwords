@@ -1,0 +1,5 @@
+<!--pages/cover/cover.wxml-->
+<view class='outline'>
+  <image src='/images/logo.png' mode='aspectFit'></image>
+  <button open-type='getUserInfo' bindgetuserinfo='doLogin'>登 录</button>
+</view>

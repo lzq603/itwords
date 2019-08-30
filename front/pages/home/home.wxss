@@ -1,0 +1,63 @@
+/* pages/home/home.wxss */
+page{
+  background-color: #CCFFFF;
+}
+/*按钮*/
+#btn{
+  background-color: #3366FF;
+  /*width: 80%;*/
+  margin: 40rpx;
+  color: white;
+}
+/*盒子*/
+.box{
+  background-color: white;
+  width: 280rpx;
+  height: 300rpx;
+  border-radius: 16rpx;
+  padding: 20rpx;
+}
+/*盒子容器*/
+.box-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin:40rpx;
+}
+/*盒子标题*/
+.title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 32rpx;
+}
+.title image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.right{
+  width: 28rpx;
+  height: 28rpx;
+}
+/*盒子详细内容*/
+.box .detail{
+  margin-top: 40rpx;
+  color: #8a8a8a;
+  font-size: 28rpx;
+}
+/*颈部*/
+.neck{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 40rpx;
+  font-size: 36rpx;
+}
+/*签到按钮*/
+.sign{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

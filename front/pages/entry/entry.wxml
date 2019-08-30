@@ -1,0 +1,110 @@
+<view class="entry-header" style="background-color:rgba(18,150,219,.40)">
+  <view class="entry-speak">{{ item.speak }}</view>
+  <view class="entry-title">{{ item.key }}</view>
+</view>
+<view class="container container-entry">
+  <!-- 标签 -->
+  <view class="entry-tags" wx:if="{{ true || item.tags }}">
+    <view wx:if="{{ item.tags.phonetic }}">
+      <text class="tag">{{ item.tags.phonetic }}</text>
+      <text selectable="true">{{ item.tags.phoneticDfn }}</text>
+    </view>
+    <view wx:if="{{ item.tags.abbr }}">
+      <text class="tag">{{ item.tags.abbr }}</text>
+      <text selectable="true">{{ item.tags.abbrDfn }}</text>
+    </view>
+    <view wx:if="{{ true || item.tags.alt }}">
+      <text class="tag">领域</text>
+      <text wx:if='{{item.category == 2}}' selectable="true">物联网</text>
+      <text wx:elif='{{item.category == 3}}' selectable="true">VR</text>
+      <text wx:elif='{{item.category == 4}}' selectable="true">大数据</text>
+    </view>
+  </view>
+  <!-- 释义 -->
+  <view class="entry-dfn">
+    <text class="dfn" selectable="true">{{ item.explanation }}</text>
+  </view>
+  <!-- 附件 -->
+  <block wx:if="{{ item.attachments }}">
+    <block wx:for="{{ attachments }}" wx:for-item="attachment" wx:key="unique">
+      <!-- wx:key 必须设为 unique 而不是 *this 否则编译后其后内容无法显示 -->
+      <!-- 必须使用 wx:for-item 为变量指定名称，否则默认名称 item 将重复使用，导致编译后其后内容无法显示 -->
+      <view class="entry-attachments" wx:if="{{ attachment.type == 'quote' }}">
+        <view class="attachment-quote">
+          <text selectable="true">{{ attachment.text }}</text>
+        </view>
+      </view>
+      <view class="entry-attachments" wx:if="{{ attachment.type == 'image' }}">
+        <image id="attachment-image" class="attachment-image" mode="{{ attachment.mode }}" src="{{ attachment.src }}"></image>
+      </view>
+      <view class="entry-attachments" wx:if="{{ attachment.type == 'audio' }}">
+        <audio id="attachment-audio" class="attachment-audio" name="{{ attachment.name }}" author="{{ attachment.author }}" src="{{ attachment.src }}"></audio>
+      </view>
+      <view class="entry-attachments" wx:if="{{ attachment.type == 'video' }}">
+        <video id="attachment-video" class="attachment-video" src="{{ attachment.src }}"></video>
+        <!-- 如果设定 video 元素的 autoplay 属性为 true，则视频加载出来之前其后内容无法显示 -->
+      </view>
+    </block>
+  </block>
+
+  <navigator url='{{"/pages/relevance/relevance?id=" + item.id}}'>
+    <view>词语联系图</view>
+  </navigator>
+  <!-- 引用 -->
+  <view>
+    <view class='quote'>引用</view>
+    <view class='quotebox'>
+      <!-- <navigator>
+        <view>1.人工智能，科大讯飞志在何方?  <text>．赛迪网．2014/1031[引用日期2016-01-19]</text></view>
+      </navigator> -->
+      <navigator wx:for='{{quote}}' url='/pages/web/webview?url={{item.href}}'>
+        <view>{{index + 1}}.{{item.title}}<text></text></view>
+      </navigator>
+    </view>
+  </view>
+
+  <!-- 脚注 -->
+  <view class="entry-footnotes" wx:if="{{ item.footnotes }}">
+    <view wx:for="{{ footnotes }}" wx:for-item="footnote" wx:key="unique">
+      <text class="footnote" selectable="true">{{ footnote }}</text>
+    </view>
+  </view>
+  <!-- 元数据 -->
+  <view class="entry-meta" wx:if="{{ item.meta }}">
+    <view wx:if="{{ item.meta.derivation }}">
+      <text class="meta">{{ "语源：" + item.meta.derivation }}</text>
+    </view>
+    <view wx:if="{{ item.meta.collectionDate }}">
+      <text class="meta">{{ "收录：" + item.meta.collectionDate }}</text>
+    </view>
+  </view>
+</view>
+<view class="container container-comments" wx:if="{{ item.comments && item.comments.length > 0 }}">
+  <!-- 评论 -->
+  <view class="entry-comments">
+    <text class="comment-heading">评论</text>
+    <view class="entry-comment" wx:for="{{ item.comments }}" wx:key="{{ index }}">
+      <view class="author">
+        <image class="author-avatar" src="{{ item.author.avatarUrl }}" background-size="cover" wx:if="{{ item.author.avatarUrl }}"></image>
+        <image class="author-avatar author-anonymous" src="https://api.adorable.io/avatars/144/{{ item.formatDate }}" background-size="cover" wx:else></image>
+        <view class="author-info">
+          <text class="author-name" wx:if="{{ item.author.nickName }}">{{ item.author.nickName }}</text>
+          <text class="author-name author-anonymous" wx:else>匿名用户</text>
+          <text class="post-time">{{ item.formatDate }}</text>
+        </view>
+      </view>
+      <text class="comment-str" selectable="true">{{ item.commentStr }}</text>
+    </view>
+  </view>
+</view>
+<!--  占位  -->
+<view style='height:118rpx'></view>
+<!-- 评论框 -->
+<view class="tool-bar">
+  <form bindsubmit="commentSubmit">
+    <view class="comment-form">
+      <input class="comment-input" type="text" confirm-type="send" placeholder="聊聊「{{ item.title }}」" bindinput="commentInput" />
+      <button class="comment-submit" form-type="submit">发送</button>
+    </view>
+  </form>
+</view>

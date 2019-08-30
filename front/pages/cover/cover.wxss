@@ -1,0 +1,19 @@
+/* pages/cover/cover.wxss */
+.outline{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 1000rpx;
+}
+image{
+  width: 30%;
+}
+button{
+  border-radius: 0;
+  background-color:blue;
+  color: white;
+}
+button::after{
+  border-radius: 0rpx;
+}

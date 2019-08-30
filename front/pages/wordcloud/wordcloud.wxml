@@ -1,0 +1,10 @@
+<!--pages/wordcloud/wordcloud.wxml-->
+<view class="tagBall">
+  <a class="tag" wx:for="{{tagEle}}" wx:key="{{index}}" style="opacity:{{item.o}};z-index:{{item.z}};left: {{item.x}}rpx;top: {{item.y}}rpx;transform: scale({{item.s}});color:blue">
+    {{item.title}}
+  </a>
+</view>
+<view class='buttonBox' style='text-align:center;'>
+  <button bindtap='previewFile' data-url='https://www.tunan.work/wendang.docx' class='button' style='#008CBA'>生成报告文档</button>
+</view>
+<!-- <web-view src="http://120.79.54.89/lijing/wordcloud.html"></web-view> -->

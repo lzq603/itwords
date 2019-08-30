@@ -1,0 +1,27 @@
+@import "/libs/wxSearch/wxSearch.wxss";
+
+.input-placeholder {
+  color: #b0bec5;
+}
+
+
+  .tag{
+      display: block;
+      position: absolute;
+      left: 0rpx;
+      top: 0rpx;
+      color: #000;
+      text-decoration: none;
+      font-size: 32rpx;
+      font-family: "微软雅黑";
+      font-weight: bold;
+  }
+  .tag:hover{border:1px solid #666;}
+  .errorText {
+  display: flex;
+  padding: 150px 50px;
+  color: #8b7f7f;
+  font-size: 24px;
+  text-align: center;
+  font-family: STXingkai;
+}

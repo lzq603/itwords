@@ -1,0 +1,31 @@
+.header {
+  margin: 32px 0;
+  text-align: center;
+}
+.header-logo {
+  display: flex;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+}
+.header-title {
+  font-size: 24px;
+  font-weight: 600;
+}
+.header-version {
+  color: #757575;
+  font-size: 12px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 32px 0;
+}
+.footer-copyright,
+.footer-meta {
+  text-align: center;
+  color: #bdbdbd;
+  font-size: 12px;
+}

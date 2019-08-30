@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tunan.dao.WordDao">
+    <select id="getWord" resultType="com.tunan.domain.Word" parameterType="int">
+        SELECT * FROM t_keywords WHERE Id = #{id}
+    </select>
+    <select id="getWords" resultType="com.tunan.domain.Word">
+        SELECT * FROM t_keywords LIMIT #{start},#{num}
+    </select>
+    <select id="searchWords" resultType="com.tunan.domain.Word" parameterType="String">
+        SELECT * FROM t_keywords WHERE `key` LIKE '%${_parameter}%' LIMIT 7
+    </select>
+    <select id="mindWords" resultType="com.tunan.domain.Word" parameterType="String">
+        SELECT * FROM t_keywords WHERE `key` LIKE '${_parameter}%' LIMIT 7
+    </select>
+    <select id="getWordsByCategory" resultType="com.tunan.domain.Word">
+        SELECT * FROM t_keywords WHERE category = #{category} LIMIT #{start},#{num}
+    </select>
+    <select id="getWordByWord" resultType="com.tunan.domain.Word">
+        SELECT * FROM t_keywords WHERE `key` LIKE '%${_parameter}%' LIMIT 1
+    </select>
+</mapper>

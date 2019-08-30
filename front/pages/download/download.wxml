@@ -1,0 +1,2 @@
+ <view bindtap='previewFile' >
+      <label>文档:</label>文档</view>
