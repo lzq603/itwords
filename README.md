@@ -10,6 +10,5 @@ IT术语词典
 
 程序使用JAVA语言、Springboot框架做程序后台，结合Python语言爬取信息，使用微信小程序语言(wxml、wxss、js)做微信小程序客户端（前台）  
 ### 程序截图
-![IT词典-新词](http://www.tunan.work:8090/upload/2019/8/QQ%E5%9B%BE%E7%89%8720190830231009-7af6e1b1b127405684a10bb2cf7fe882.png)  
-![IT词典-小黄车](http://www.tunan.work:8090/upload/2019/8/QQ%E5%9B%BE%E7%89%8720190830231024-8c3c7a6d769c4d188a798f6ecd92e3c6.png)  
-![IT词典-搜索](http://www.tunan.work:8090/upload/2019/8/QQ%E5%9B%BE%E7%89%8720190830233423-81ceee9db6ce4e45a1e0aa1fe96fbdda.png)  
+<p style="display:flex;flex-direction: row;justify-content:center;"><img style="width:200px" src="http://www.tunan.work:8090/upload/2019/8/QQ%E5%9B%BE%E7%89%8720190830231009-7af6e1b1b127405684a10bb2cf7fe882.png"></img>&nbsp;&nbsp;&nbsp;
+<img style="width:200px" src="http://www.tunan.work:8090/upload/2019/8/QQ%E5%9B%BE%E7%89%8720190830231024-8c3c7a6d769c4d188a798f6ecd92e3c6.png"></img>&nbsp;&nbsp;&nbsp;<img style="width:200px" src="http://www.tunan.work:8090/upload/2019/8/QQ%E5%9B%BE%E7%89%8720190830233423-81ceee9db6ce4e45a1e0aa1fe96fbdda.png"></img></p>
